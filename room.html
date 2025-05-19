@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms Manager</title>
+    <link rel="stylesheet" href="rooms.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>ROOMS <br><small>College Building</small></h2>
+        <input type="text" id="roomNumber" placeholder="Room Number">
+        <input type="text" id="roomDescription" placeholder="Room Description">
+        <button class="save-btn" onclick="saveRoom()">SAVE</button>
+    </div>
+
+    <div class="list-container">
+        <input type="text" id="searchInput" class="search-box" placeholder="Search...">
+        <div id="roomList"></div>
+
+    </div>
+    <script src="rooms.js"></script>
+</body>
+</html>

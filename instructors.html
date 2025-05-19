@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instructor Management</title>
+  <link rel="stylesheet" href="instructors.css">
+</head>
+<body>
+  <div class="container">
+    <!-- LEFT PANEL -->
+    <div class="form-panel">
+      <h2>INSTRUCTORS</h2>
+      <label>Instructor’s Name:</label>
+      <input type="text" placeholder="JOHN SMITH" />
+
+      <label>Program/Faculty:</label>
+      <select>
+        <option>BS EDUCATION</option>
+      </select>
+
+      <label>Courses/Subjects Handled: 1</label>
+      <div class="course-row">
+        <select>
+          <option>GE 1</option>
+        </select>
+        <input type="text" placeholder="Enter Course Code (e.g., CS 001)" />
+        <button class="add-btn">ADD COURSE</button>
+      </div>
+
+
+      <label>Profile Picture:</label>
+      <div class="profile-pic">
+        <input type="file" />
+        <button class="camera-btn">USE CAMERA</button>
+      </div>
+
+      <textarea placeholder="Captured image will appear here..."></textarea>
+      
+      <div class="action-buttons">
+        <button class="capture">CAPTURE</button>
+        <button class="reset">RESET</button>
+      </div>
+      <button class="save">SAVE</button>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="list-panel">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <div class="instructor-list">
+        <!-- Dummy instructor card -->
+        <div class="instructor-card">
+          <img src="https://via.placeholder.com/40" alt="profile" />
+          <div class="info">
+            <strong>Odysseus Epic</strong>
+            <p>BS EDUCATION</p>
+            <table>
+              <thead>
+                <tr><th>COURSE/S</th><th>COURSE CODE</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>GE 1</td><td>CS 001</td></tr>
+                <tr><td>GE 1</td><td>CS 002</td></tr>
+                <tr><td>GE 1</td><td>CS 003</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="actions">
+            <button class="edit">✏️</button>
+            <button class="delete">🗑️</button>
+          </div>
+        </div>
+        <!-- Duplicate more cards as needed -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>

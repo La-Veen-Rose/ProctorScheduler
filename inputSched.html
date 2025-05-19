@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Scheduler</title>
+    <script src="https://kit.fontawesome.com/5044335a8a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="inputSched.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- Input Form (Left Side) -->
+        <div class="form-container">
+            <header>INPUT DETAILS</header>
+            <form action="submit.php" method="POST">
+                <div class="details">
+                    <label>Subject:</label>
+                    <select name="subject" required>
+                        <option value="" disabled selected>Select Subject</option>
+                        <option value="GE 1">GE 1</option>
+                        <option value="GE 2">GE 2</option>
+                        <option value="GE 3">GE 3</option>
+                        <option value="GE 4">GE 4</option>
+                    </select>
+                </div>    
+                <div class="details">
+                    <label>Course Code:</label>
+                    <input type="text" name="courseCode" placeholder="Course Code" required>
+                </div>
+                <div class="details">
+                    <label>Program:</label>
+                    <select name="program" required>
+                        <option value="" disabled selected>Select Program</option>
+                        <option value="BSCS">BSCS</option>
+                        <option value="BSCE">BSCE</option>
+                        <option value="BSA">BSA</option>
+                        <option value="BSED">BSED</option>
+                    </select>
+                </div>  
+                <div class="details">
+                    <label>Section:</label>
+                    <input type="text" name="section" placeholder="Section" required>
+                </div>
+                <div class="details">
+                    <label>Year Level:</label>
+                    <select name="yearLevel" required>
+                        <option value="" disabled selected>Select Year</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                        <option value="5th Year">5th Year</option>
+                    </select>
+                </div>
+                <div class="details">
+                    <label>Instructor:</label>
+                    <input type="text" name="instructor" placeholder="Instructor Name" required>
+                </div>
+                <div class="button">
+                    <button type="submit" class="add-subject">ADD SUBJECT</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Subjects Table (Right Side) -->
+        <div class="subjects">
+            <header>Subjects</header>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <table class="content-table">   
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Course Code</th>
+                        <th>Program</th>
+                        <th>Year & Section</th>
+                        <th>Instructor</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be fetched from the database -->
+                    <tr>
+                        <td>GE1</td>
+                        <td>CS122</td>
+                        <td>BSCE</td>
+                        <td>5A</td>
+                        <td>John Doe</td>
+                        <td>
+                            <a href="#" class="link-dark"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="#" class="link-dark"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>GE2</td>
+                        <td>CS123</td>
+                        <td>BSED</td>
+                        <td>4Y</td>
+                        <td>Jane Smith</td>
+                        <td>
+                            <a href="#" class="link-dark"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="#" class="link-dark"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                    </tr>
+                </tbody>    
+            </table>
+            <div class="btn">
+                <button class="add-subject">GENERATE SCHEDULE</button>
+                <button class="add-subject">VIEW SCHEDULE</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

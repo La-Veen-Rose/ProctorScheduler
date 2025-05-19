@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Scheduler</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Sidebar space but with an iframe -->
+    <div class="sidebar-container">
+        <iframe src="sidebar.html" class="sidebar-iframe"></iframe>
+    </div>
+
+    <div class="main-content">
+        <div class="stats">
+            <div class="stat-box teachers">
+                <div class="icon">
+                    <img src="teachers_icon.png" alt="Teachers">
+                </div>
+                <div class="content">
+                    <span>20</span>
+                    <p>TEACHERS</p>
+                </div>
+            </div>
+        
+            <div class="stat-box rooms">
+                <div class="icon">
+                    <img src="rooms_icon.png" alt="Rooms">
+                </div>
+                <div class="content">
+                    <span>15</span>
+                    <p>ROOMS</p>
+                </div>
+            </div>
+        
+            <div class="stat-box programs">
+                <div class="icon">
+                    <img src="programs_icon.png" alt="Programs">
+                </div>
+                <div class="content">
+                    <span>10</span>
+                    <p>PROGRAMS</p>
+                </div>
+            </div>
+        
+            <div class="stat-box courses">
+                <div class="icon">
+                    <img src="course_icon.png" alt="Courses">
+                </div>
+                <div class="content">
+                    <span>18</span>
+                    <p>COURSES</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="for-background">
+            <div class="toggle-buttons">
+                <button class="toggle-btn active" onclick="showList('instructors')">Instructors</button>
+                <button class="toggle-btn" onclick="showList('courses')">Courses</button>
+                <button class="toggle-btn" onclick="showList('courseCode')">Course Code</button>
+                <button class="toggle-btn" onclick="showList('programs')">Programs</button>
+            </div>
+            <div id="listContainer">
+                <ul id="dataList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
