@@ -54,6 +54,10 @@
     transform: translateX(5px); 
     background: rgba(255, 255, 255, 0.2);
 }
+.sidebar ul li.active { /* <-- NEW CLASS */
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.2);
+}
 
 /* Sidebar Icons */
 .sidebar ul li img {

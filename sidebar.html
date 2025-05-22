@@ -10,7 +10,7 @@
     <div class="sidebar">
         <h2>EXAM SCHEDULER</h2>
         <ul>
-            <li><img src="dashboard_icon.png" alt="Dashboard"> <a href="dashboard.html" target="contentFrame">Dashboard</a></li>
+            <li class="active"> <img src="dashboard_icon.png" alt="Dashboard"> <a href="dashboard.html" target="contentFrame">Dashboard</a></li>
             <li><img src="details_icon.png" alt="Details Input"> <a href="inputSched.html" target="contentFrame">Details Input</a></li>
             <li><img src="schedule_icon.png" alt="Schedule"> <a href="#" target="contentFrame">Schedule</a></li>
             <li><img src="instructors_icon.png" alt="Instructors"> <a href="#" target="contentFrame">Instructors</a></li>
@@ -24,5 +24,34 @@
     <div class="content">
         <iframe name="contentFrame" src="dashboard.html" frameborder="0" width="100%" height="100%"></iframe>
     </div>
+
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarItems = document.querySelectorAll('.sidebar ul li');
+
+            const iframe = document.querySelector('iframe[name="contentFrame"]');
+            const initialSrc = iframe.getAttribute('src');
+
+            sidebarItems.forEach(item => {
+                const link = item.querySelector('a');
+                if (link && link.getAttribute('href') === initialSrc) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active'); // Ensure only one is active initially
+                }
+
+                item.addEventListener('click', function(event) {
+                    
+                    sidebarItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+
+                    // Add 'active' class to the clicked item
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
