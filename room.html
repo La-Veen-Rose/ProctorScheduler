@@ -3,22 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rooms Manager</title>
+    <title>Exam Scheduler</title>
+    <script src="https://kit.fontawesome.com/5044335a8a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="rooms.css">
 </head>
 <body>
-    <div class="form-container">
-        <h2>ROOMS <br><small>College Building</small></h2>
-        <input type="text" id="roomNumber" placeholder="Room Number">
-        <input type="text" id="roomDescription" placeholder="Room Description">
-        <button class="save-btn" onclick="saveRoom()">SAVE</button>
-    </div>
+    
+    <div class="container">
+        <!-- Input Form (Left Side) -->
+        <div class="form-container">
+            <header>ROOMS</header>
+            <form action="submit.php" method="POST">
+                <div class="details">
+                    <label>Rooms Number:</label>
+                    <select name="rooms" required>
+                        <option value="" disabled selected>Select Room Number</option>
+                        <option value="Room Num">101</option>
+                        <option value="Room Num">102</option>
+                        <option value="Room Num">103</option>
+                        <option value="Room Num">104</option>
+                    </select>
+                </div>    
+                <div class="details">
+                    <label>Room Descripton:</label>
+                    <input type="text" name="roomDescription" placeholder="Room Descripton" required>
+                </div>
+                <div class="details">
+                    <label>Building:</label>
+                    <input type="text" name="building" placeholder="Building" required>
+                </div>  
+                <div class="button">
+                    <button type="submit" class="add-room">ADD ROOM</button>
+                </div>
+            </form>
+        </div>
 
-    <div class="list-container">
-        <input type="text" id="searchInput" class="search-box" placeholder="Search...">
-        <div id="roomList"></div>
-
+        <!-- Subjects Table (Right Side) -->
+        <div class="rooms">
+        
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <table class="content-table">   
+                <thead>
+                    <tr>
+                        <th>Room Number</th>
+                        <th>Room Descripton</th>
+                        <th>Building</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be fetched from the database -->
+                    <tr>
+                        <td>101</td>
+                        <td>School Press Office</td>
+                        <td>Queen of Peace</td>                      
+                        <td>
+                            <a href="#" class="link-dark"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="#" class="link-dark"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                    </tr>
+                </tbody>    
+            </table>
+            
+        </div>
     </div>
-    <script src="rooms.js"></script>
 </body>
 </html>

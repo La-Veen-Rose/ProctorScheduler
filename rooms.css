@@ -5,10 +5,22 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    margin: 40px;
+    height: 100vh;
     display: flex;
-    gap: 30px;
+    background-color: #f5f5f5;
 }
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Input Form (Left) */
 .form-container {
     flex: 1;
     padding: 20px;
@@ -16,65 +28,63 @@ body {
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-
-.list-container{
-    flex: 1.5;
-    padding: 20px;
-    border-radius: 5px;
-    background: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-.form-container, .list-container {
-    padding: 20px;
-    border-radius: 10px;
-    width: 45%;
+/* Apply faded color to default options */
+select:required:invalid {
+    color: gray;
 }
 
-.form-container h2 {
-    color: #1f3fa3;
+/* Ensure selected options appear in normal color */
+option {
+    color: black;
 }
 
-input[type="text"] {
+
+.details {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    font-weight: 500;
+}
+input, select {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid gray;
 }
-
-.save-btn {
-    background-color: #2ecc71;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.room-card {
-    background-color: #1f3fa3;
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
+.button {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
-
-.room-info {
-    flex-grow: 1;
-}
-
-.icons img {
-    width: 20px;
-    margin-left: 15px;
+button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
     cursor: pointer;
 }
+button:hover {
+    opacity: 0.7;
+}
 
-.search-box {
-    width: 100%;  
+/* Subjects Table (Right) */
+.rooms {
+    flex: 1.5;
+    padding: 20px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.search-bar {
     display: flex;
     align-items: center;
     background-color: #eee;
@@ -82,3 +92,39 @@ input[type="text"] {
     border-radius: 50px;
     margin-bottom: 15px;
 }
+.search-bar input {
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+}
+.fa-solid {
+    cursor: pointer;
+}
+.fa-solid:hover {
+    color: orangered;
+}
+
+/* Table */
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.content-table th, .content-table td {
+    padding: 12px;
+    border-bottom: 1px solid lightgray;
+    text-align: left;
+}
+.content-table thead {
+    background-color: cornflowerblue;
+    color: white;
+}
+.link-dark {
+    text-decoration: none;
+    color: black;
+}
+.link-dark:hover {
+    color: red;
+}
+
+
