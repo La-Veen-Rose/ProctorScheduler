@@ -51,11 +51,10 @@
 
 /* Hover Effect */
 .sidebar ul li:hover {
-    transform: translateX(5px); 
+    transform: scale(1.1); 
     background: rgba(255, 255, 255, 0.2);
 }
 .sidebar ul li.active { /* <-- NEW CLASS */
-    transform: translateX(5px);
     background: rgba(255, 255, 255, 0.2);
 }
 
