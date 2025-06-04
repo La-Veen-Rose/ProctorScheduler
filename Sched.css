@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+}
+.text-header{
+    text-align: center;
+}
+.logo img {
+    height: 80px;
+    margin-right: 20px;
+}
+
+.college-info {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.college-info h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.college-info p {
+    margin: 2px 0;
+}
+
+.smc2-icon img {
+    margin-top: 20px;
+    width: 200px;
+}
+
+
+.print-icon img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.print-icon img:hover {
+    transform: scale(1.1);
+}
+
+.schedule {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.schedule h2 {
+    margin-bottom: 5px;
+    color: #003366;
+}
+
+.schedule p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+@media print {
+    header,
+    .schedule table th {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background-color: #003366;
+        color: white; /* optional for contrast */
+    }
+}
