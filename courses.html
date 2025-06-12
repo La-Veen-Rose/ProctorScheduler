@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Scheduler</title>
+    <script src="https://kit.fontawesome.com/5044335a8a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- Input Form (Left Side) -->
+        <div class="form-container">
+            <header>COURSES</header>
+            <form action="submit.php" method="POST">
+                <div class="details">
+                    <label>Course Code:</label>
+                    <select name="rooms" required>
+                        <option value="" disabled selected>Select Course Code</option>
+                        <option value="">GE 1</option>
+                        <option value="">GE 2</option>
+                    </select>
+                </div>    
+                <div class="details">
+                    <label>Course Title:</label>
+                    <input type="text" name="" placeholder="Course Title" required>
+                </div>
+                <div class="details">
+                    <label>Code:</label>
+                    <input type="text" name="" placeholder="Code" required>
+                </div>  
+                <div class="button">
+                    <button type="submit" class="add-course">ADD COURSE</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Subjects Table (Right Side) -->
+        <div class="rooms">
+        
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <table class="content-table">   
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Code</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be fetched from the database -->
+                    <tr>
+                        <td>GE 4</td>
+                        <td>Mathematics in Modern World</td>
+                        <td>1507</td>                      
+                        <td>
+                            <a href="#" class="link-dark"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="#" class="link-dark"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                    </tr>
+                </tbody>    
+            </table>
+            
+        </div>
+    </div>
+</body>
+</html>

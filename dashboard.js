@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const data = {
     instructors: ["John Doe", "Jane Smith", "Michael Johnson", "Emily Brown"],
-    courses: ["Mathematics", "Physics", "Computer Science", "Biology"],
-    courseCode: ["MATH101", "PHYS202", "CS301", "BIO401"],
-    programs: ["Engineering", "Medicine", "Business", "Arts"],
+    rooms: ["201", "202", "203", "204"],
+    programs: ["BSCS", "BSCE", "BSBS", "AB PSYCH"],
+    courses: ["GE1", "GE2", "GE3", "GE4"],
 };
 
 // Function to show the selected list
